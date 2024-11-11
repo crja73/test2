@@ -163,23 +163,23 @@ import time
 
 
 
-# function for authorization in apiship service
-# def apiship_auth():
-#     url = 'https://api.cdek.ru/v2/oauth/token?parameters'
-#     data = {
-#         {
-#         "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJvcmRlcjphbGw...",
-#         "token_type": "bearer",
-#         "expires_in": 3599,
-#         "scope": "order:all payment:all",
-#         "jti": "9adca50a-..."
-#         }
-#     }
-#     headers = {
-#         "Content-Type": "application/json"
-#     }
-#     response = requests.post(url, data=json.dumps(data), headers=headers)
-#     return response.json()
+
+def apiship_auth():
+    url = 'https://api.cdek.ru/v2/oauth/token?parameters'
+    data = {
+        {
+        "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJvcmRlcjphbGw...",
+        "token_type": "bearer",
+        "expires_in": 3599,
+        "scope": "order:all payment:all",
+        "jti": "9adca50a-..."
+        }
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(url, data=json.dumps(data), headers=headers)
+    return response.json()
 
 
 
